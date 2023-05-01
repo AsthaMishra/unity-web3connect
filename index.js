@@ -72,6 +72,7 @@ async function signMessage(message) {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     const signature = await signer.signMessage(message);
     console.log({ signature });
+    copyToClipboard(signature);
     displayResponse(
       "Signature complete.<br><br>Copy to clipboard then continue to App",
       signature
